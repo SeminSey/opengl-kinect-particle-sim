@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(opengl-renderer LANGUAGES CXX)
+project(opengl-kinect-particle-sim LANGUAGES CXX)
 
 # use C++23 and set executable output directory to bin/
 set(CMAKE_CXX_STANDARD 23)
@@ -23,7 +23,7 @@ foreach(ASSET_FILE ${ASSET_FILES})
 endforeach()
 
 # add dependencies
-include("cmake/assimp.cmake")
 include("cmake/opengl.cmake")
 include("cmake/sdl.cmake")
 include("cmake/glm.cmake")
+include("cmake/libfreenect.cmake")

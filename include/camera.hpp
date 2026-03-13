@@ -18,7 +18,6 @@ struct Camera {
         // upload to GPU
         glUniformMatrix4fv(8, 1, false, glm::value_ptr(transform_matrix));
         glUniformMatrix4fv(12, 1, false, glm::value_ptr(projection_matrix));
-        glUniform3fv(16, 1, glm::value_ptr(_position));
     }
 
     glm::vec3 _position{ 0, 0, 0 };

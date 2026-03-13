@@ -15,14 +15,14 @@ namespace Input {
 	};
 
 	struct Keys {
-		// check if key was pressed in this frame
-		bool static inline pressed(char character) noexcept { return Data::get().keys_pressed.contains(std::tolower(character)); }
-		// check if key was pressed in this frame
-		bool static inline pressed(SDL_Keycode code) noexcept { return Data::get().keys_pressed.contains(code); }
-		// check if key is being held down
-		bool static inline down(char character) noexcept { return Data::get().keys_down.contains(std::tolower(character)); }
-		// check if key is being held down
-		bool static inline down(SDL_Keycode code) noexcept { return Data::get().keys_down.contains(code); }
+		// check if key was pressed in this frame (edge-triggered)
+		bool static inline keyDown(char character) noexcept { return Data::get().keys_pressed.contains(std::tolower(character)); }
+		// check if key was pressed in this frame (edge-triggered)
+		bool static inline keyDown(SDL_Keycode code) noexcept { return Data::get().keys_pressed.contains(code); }
+		// check if key is being held down (level-triggered)
+		bool static inline keyPressed(char character) noexcept { return Data::get().keys_down.contains(std::tolower(character)); }
+		// check if key is being held down (level-triggered)
+		bool static inline keyPressed(SDL_Keycode code) noexcept { return Data::get().keys_down.contains(code); }
 		// check if key was released in this frame
 		bool static inline released(char character) noexcept { return Data::get().keys_released.contains(std::tolower(character)); }
 		// check if key was released in this frame

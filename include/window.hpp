@@ -33,6 +33,8 @@ struct Window {
         glEnable(GL_DEPTH_TEST); // enable depth buffer and depth testing
         glEnable(GL_CULL_FACE); // cull backfaces
         glEnable(GL_FRAMEBUFFER_SRGB); // gamma corrected framebuffer
+        glEnable(GL_BLEND); // blend colors by source alpha
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // standard alpha blending
         SDL_GL_SetSwapInterval(1); // vsync
 
         // multisampling allows us to do blending and anti-aliasing (MSAA)
