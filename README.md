@@ -20,6 +20,8 @@ Those particles are influenced by a few factors: eg. movement speed, depth, amou
 
 ## other stuff
 
-I bought this kinect for experiments like 10 years ago in a thrift shop for 20€. guess it paid off now.
-shout out to libfreenect's c++ examples, random opengl online tutorials regarding point clouds, and the computer graphics course summer 2025.
+I bought this kinect for experiments like 10 years ago in a thrift shop for 20€.
+guess it paid off now.
+
+shout out to libfreenect's c++ examples, random opengl online tutorials regarding point clouds, and the computer graphics course winter 2025/26.
 
